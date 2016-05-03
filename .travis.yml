@@ -1,7 +1,5 @@
 language: node_js
 node_js:
-  - 4
-  - 5
   - 6
 git:
   depth: 3
@@ -9,28 +7,22 @@ git:
 sudo: false
 
 before_install:
-  - export CHROME_BIN=chromium-browser  # Karma CI
+  - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
 
 before_script:
   - sh -e /etc/init.d/xvfb start
-  - nohup bash -c webdriver-manager start 2>&1 &  # Protractor CI
-  - sleep 1  # give server time to start
+  - nohup bash -c webdriver-manager start 2>&1 &
+  - sleep 1
 
 branches:
   only: master
-
-env:
-  global:
-    # https://github.com/DefinitelyTyped/tsd#tsdrc
-    # Token has no scope (read-only access to public information)
-    - TSD_GITHUB_TOKEN=9b18c72997769f3867ef2ec470e626d39661795d
 
 cache:
   directories: node_modules
 
 deploy:
   provider: heroku
-  api_key:
-    secure: DcnDdBXbOXGwBxkniDh/BBQZigyb5pmIpVWjRsqIs7D2MGBCJSa9mLS0l/q8F2UK4Rl$
   app: guarded-escarpment-97496
+  api_key:
+    secure: cXjbCtrWr2h3wZIN+34CFXVRoNmpnGHV4ai6nxSxFiNIulBTBSxlNnqX0Hb0lGo4dnPjj561mA2gu7255oJvAFhtWkxlishS9NmQuslXZ5Wqvr5hDa7u0gPYD8XzVYyM7Z9BELukMjWUf5faslvVTsXefXU4t+i1ysBEZzD5xnw+cBN69MbyCeCQLDkWSq2KfvQjzX49fg4ADeL9suPyLzgkUxJAGZRzM7tThNtMLMeF2B82nmIBqSLHUgzQLcsOd4fRy7hDGv5I1BbaGbtdgs6peW9ynonmnECVHGbC+XBkx4Cgpbas1pK5TV8a0f3pmjMsUzeSqOvfrMAZF39shuCPo0+9rqY0af6rV6cmZLiZo6vONVGZfknBEEl6Ja3hxvyqPftkNckkO44P3ZOPY9oZlZ6onEbcOVe/srtD9htEBPTTlsiAotqJlhrV+HXxerida62hgfT1Z7KgwoKnhDriA/4iESa4CBJdIygefbulhyKpPYgZcgsDawVavnvxkZnNfXgBPjLaE/76rHhNfYbG7UPWmbKozPqtW/FqGw3+JI7LmX8cuQVxd/Ca+pTcqpqwBgnBih52wioUa+8W7LiDUKJgAwQ4p9Y9dXRgfDg1v/KO8N2g4oJ7ATlC6JI59c3kOPObBqi1TgOgjtrjnoQvn2/yeJfrthrhheGKC4A=
