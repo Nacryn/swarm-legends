@@ -37,7 +37,7 @@
   },
   "author": "Mikaël (with a base from : Minko Gechev <mgechev>)",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "angular2-service-worker": "^0.1.1",
     "async": "^1.4.2",
     "autoprefixer": "^6.3.3",
@@ -110,9 +110,7 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "walk": "^2.3.9",
-    "yargs": "^4.2.0"
-  },
-  "dependencies": {
+    "yargs": "^4.2.0",
     "angular2": "2.0.0-beta.17",
     "es6-module-loader": "^0.17.8",
     "es6-promise": "^3.1.2",
