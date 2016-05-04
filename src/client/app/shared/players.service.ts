@@ -12,5 +12,4 @@ export class PlayerService {
       players => players.filter(player => player.id === id)[0]
     );
   }
-
 }

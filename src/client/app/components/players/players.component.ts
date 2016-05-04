@@ -1,7 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
 
-import { Player } from './player';
-import { PlayerService } from './players.service';
+import { Player } from '../../shared/player';
+import { PlayerService } from '../../shared/players.service';
 
 @Component ({
   selector: 'players',

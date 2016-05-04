@@ -3,7 +3,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 
 import { SceneComponent } from '../+scene/index';
 import { DashboardComponent } from '../+dashboard/index';
-import { PlayerService } from './players/players.service';
+import { PlayerService } from '../shared/players.service';
 import { PostService } from './timeline/posts.service';
 
 @Component({
